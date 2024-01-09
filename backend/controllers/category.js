@@ -1,20 +1,14 @@
-const productsModel = require("../models/products");
+const categoryModel = require("../models/category");
 
 
 const add = (req, res) => {
-  const { image_src,  title, price,category } = req.body;
-
-  const product = new productsModel({
-    image_src,
-    title ,
-   price,
-   category
+  const { typeOfCat } = req.body;
+  const category = new categoryModel({
+    typeOfCat
   });
 
-  product
- 
+  category
     .save()
-   
     .then((result) => {
       res.status(201).json({
         success: true,
@@ -32,24 +26,24 @@ const add = (req, res) => {
     });
 };
 
-const getAllProducts = (req, res) => {
+const getAllcategory = (req, res) => {
   
-  productsModel
+  categoryModel
     .find()
-    .populate("category")
+    
     .exec()
     .then((products) => {
       if (products.length) {
         res.status(200).json({
           success: true,
-          message: `All the products`,
+          message: `All category`,
          
           products:products,
         });
       } else {
         res.status(200).json({
           success: false,
-          message: `No products Yet`,
+          message: `No category Yet`,
         });
       }
     })
@@ -63,9 +57,7 @@ const getAllProducts = (req, res) => {
 };
 
 
-
-
 module.exports = {
   add,
-  getAllProducts
+  getAllcategory
 };
