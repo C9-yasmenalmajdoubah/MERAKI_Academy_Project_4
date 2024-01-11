@@ -33,6 +33,7 @@ const updateCartByIdCart = async (req, res) => {
 
 const getAllCartProducts = (req, res) => {
   const userId = req.token.userId;
+
   cartModel
     .findById(userId)
     .populate("cartItem")
@@ -63,11 +64,19 @@ const getAllCartProducts = (req, res) => {
 ///delete from cart
 
 const deleteItem = (req, res) => {
-  
+  const id = req.params.id;
   const userId = req.token.userId;
   cartModel
-    .findById(id)
-    .then((result) => {
+  .findOneAndUpdate(
+   id,
+    { $pull: 
+    {
+    
+      cartItem: id
+    }}
+    
+  )
+      .then((result) => {
       res.status(200).json({
         success: true,
         message: `items deleted`,

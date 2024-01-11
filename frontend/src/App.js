@@ -6,9 +6,11 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
 export const userContext = createContext();
+const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [token, setToken] = useState(localStorage.getItem("token"));
 function App() {
   return (
-    <userContext.Provider>
+    <userContext.Provider value={{ setIsLoggedIn, setToken, token }}>
        <div className="App">
       <h1>Hello, World!</h1>
       <Nav/>
