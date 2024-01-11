@@ -2,16 +2,17 @@ const cartModel = require("../models/cart");
 const updateCartByIdCart = async (req, res) => {
   const user_Id = req.token.userId;
   // const { product, quantity, price } = req.body;
-
+  console.log(req.body);
   cartModel
     .findOneAndUpdate(
       { user: user_Id },
+      { $push: 
       {
-        user: user_Id,
-        cartItem: {
-          $push: { id: req.body },
-        },
-      }
+       // user: user_Id,
+        cartItem: req.body,
+      }},
+      { new: true }
+      
     )
     .then((items) => {
       console.log(items);
@@ -62,8 +63,10 @@ const getAllCartProducts = (req, res) => {
 ///delete from cart
 
 const deleteItem = (req, res) => {
+  
+  const userId = req.token.userId;
   cartModel
-    .findByIdAndDelete(id)
+    .findById(id)
     .then((result) => {
       res.status(200).json({
         success: true,

@@ -10,7 +10,7 @@ const add = (req, res) => {
    price,
    category
   });
-
+console.log(req.body)
   product
  
     .save()
