@@ -61,38 +61,9 @@ const getAllCartProducts = (req, res) => {
       });
     });
 };
-///delete from cart
-
-const deleteItem = (req, res) => {
-  const id = req.params.id;
-  const userId = req.token.userId;
-  cartModel
-  .findOneAndUpdate(
-   id,
-    { $pull: 
-    {
-    
-      cartItem: id
-    }}
-    
-  )
-      .then((result) => {
-      res.status(200).json({
-        success: true,
-        message: `items deleted`,
-        result: result,
-      });
-    })
-    .catch((err) => {
-      res.status(500).json({
-        success: false,
-        message: `Server Error`,
-        err: err.message,
-      });
-    });
-};
 
 module.exports = {
   updateCartByIdCart,
   getAllCartProducts,
+  
 };
