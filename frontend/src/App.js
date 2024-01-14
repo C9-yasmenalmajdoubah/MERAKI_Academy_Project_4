@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Nav from "./components/Nav";
 import Cart from "./components/Cart";
 import Contact from "./components/Contact";
+import About from "./components/About";
 export const userContext = createContext();
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+
 
         </Routes>
     </div>
