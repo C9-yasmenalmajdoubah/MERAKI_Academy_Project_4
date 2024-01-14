@@ -3,8 +3,8 @@ import React ,{useEffect,useState,useContext}from 'react'
 import { userContext } from "../../App"
 
 const Cart = () => {
-  const { token } = useContext(userContext);
-  const [productInCart, setProductInCart] = useState([])
+  const { token,productInCart, setProductInCart } = useContext(userContext);
+  
   const getProduct = () => {
     console.log("token:",token);
     axios
