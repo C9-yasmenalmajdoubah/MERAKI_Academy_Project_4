@@ -7,6 +7,10 @@ const Nav = () => {
       
         <Link to="/users/login">Login</Link>
         <Link to="/home">Home</Link>
+        <Link to="/cart">Cart</Link>
+        <Link to="/contact">Contact</Link>
+
+
     </div>
   )
 };

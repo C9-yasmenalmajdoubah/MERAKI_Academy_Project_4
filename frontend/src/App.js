@@ -5,6 +5,8 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
+import Cart from "./components/Cart";
+import Contact from "./components/Contact";
 export const userContext = createContext();
 
 function App() {
@@ -19,7 +21,9 @@ function App() {
           <Route path="/users/register" element={<Register />} />
           <Route path="/users/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact />} />
+
         </Routes>
     </div>
     </userContext.Provider>
