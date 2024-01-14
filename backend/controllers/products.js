@@ -39,6 +39,7 @@ const getAllProducts = (req, res) => {
     .populate("category")
     .exec()
     .then((products) => {
+      console.log("pro: ",products);
       if (products.length) {
         res.status(200).json({
           success: true,

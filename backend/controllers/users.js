@@ -1,7 +1,7 @@
 const usersModel = require("../models/users");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const cartModel =require("../models/cart");
+const cartModel = require("../models/cart");
 
 const register = (req, res) => {
   const { name, email, password, role } = req.body;
@@ -9,31 +9,32 @@ const register = (req, res) => {
     name,
     email,
     password,
-    role
+    role,
   });
 
   user
     .save()
     .then((result) => {
-      const cart =new cartModel({
-        user :result._id,
-        cartItem:[]
-      }).save().then((result)=>{
-        res.status(201).json({
-          success: true,
-          message: `Account Created Successfully`,
-          user: result,
-        });
-
+      const cart = new cartModel({
+        user: result._id,
+        cartItem: [],
       })
-
-      
-    }).catch((err)=>{
+        .save()
+        .then((result) => {
+          res.status(201).json({
+            success: true,
+            message: `Account Created Successfully`,
+            user: result,
+          });
+        });
+    })
+    .catch((err) => {
       res.status(500).json({
         success: false,
         message: `Server Error`,
         err: err.message,
-    })})
+      });
+    })
 
     .catch((err) => {
       if (err.keyPattern) {
@@ -50,7 +51,7 @@ const register = (req, res) => {
     });
 };
 
-//  user login 
+//  user login
 const login = (req, res) => {
   const password = req.body.password;
   const email = req.body.email.toLowerCase();
@@ -75,13 +76,12 @@ const login = (req, res) => {
         console.log(result);
         const payload = {
           userId: result._id,
-          
+
           role: result.role,
-         
         };
 
         const options = {
-          expiresIn: "30d",
+          expiresIn: "5h",
         };
         const token = jwt.sign(payload, process.env.SECRET, options);
         res.status(200).json({
@@ -104,5 +104,5 @@ const login = (req, res) => {
 
 module.exports = {
   register,
-  login
+  login,
 };
