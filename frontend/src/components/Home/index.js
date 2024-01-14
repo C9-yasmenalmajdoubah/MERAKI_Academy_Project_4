@@ -39,7 +39,7 @@ const allProduct = product.map((elem , i)=>{
      <img src= {elem.image_src} ></img>
      <br></br>
      <button onClick={()=>{
-setProductInCart (...productInCart,elem)
+setProductInCart ([...productInCart,elem])
      }}>ADD To Cart</button>
         </>)
 })

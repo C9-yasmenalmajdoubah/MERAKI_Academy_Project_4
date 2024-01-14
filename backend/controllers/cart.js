@@ -35,15 +35,15 @@ const getAllCartProducts = (req, res) => {
   const userId = req.token.userId;
 
   cartModel
-    .findById(userId)
+    .find({user:userId})
     .populate("cartItem")
     .exec()
     .then((products) => {
-      if (products.length) {
+      if (products) {
         res.status(200).json({
           success: true,
           message: `All the products`,
-          user: user,
+          user: "hello",
           products: products,
         });
       } else {
