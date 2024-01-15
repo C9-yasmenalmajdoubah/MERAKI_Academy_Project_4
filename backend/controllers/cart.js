@@ -2,14 +2,13 @@ const cartModel = require("../models/cart");
 const updateCartByIdCart = async (req, res) => {
   const user_Id = req.token.userId;
   // const { product, quantity, price } = req.body;
-  console.log(req.body);
+  console.log( "reee",req.body);
   cartModel
     .findOneAndUpdate(
       { user: user_Id },
       { $push: 
       {
-       // user: user_Id,
-        cartItem: req.body,
+        porduct: req.body
       }},
       { new: true }
       
@@ -36,10 +35,11 @@ const getAllCartProducts = (req, res) => {
 
   cartModel
     .find({user:userId})
-    .populate("cartItem")
+    .populate("porduct")
     .exec()
     .then((products) => {
       if (products) {
+        console.log (products)
         res.status(200).json({
           success: true,
           message: `All the products`,
