@@ -10,7 +10,7 @@ const Nav = () => {
   return (
     <div className="Nav" >
       <div className="nav-logo">
-        <img src ="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000750_online_international_e_commerce_logo_maker-01.png" alt ="logo" style={{ widthay: "30%", height: "auto" }}/>
+        <img src ="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000750_online_international_e_commerce_logo_maker-01.png" alt ="logo"  width="60" height="60"/>
       <p>For You Lady</p>
       </div>
       <ul className="nav-menu">
@@ -21,8 +21,8 @@ const Nav = () => {
       </ul>
       <div className="nav-login-cart">
         <button>Login</button>
-        <img src="https://i.pinimg.com/564x/a2/c1/be/a2c1beb00b8d5d172f07c548bd29c6aa.jpg" alt = "cart"/>
-      
+        <img src="https://i.pinimg.com/564x/a2/c1/be/a2c1beb00b8d5d172f07c548bd29c6aa.jpg" alt = "cart" width="60" height="60"/>
+      <div className="nav-cart-count">0</div>
       </div>
      
     </div>
