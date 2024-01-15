@@ -18,7 +18,7 @@ function App() {
   return (
     <userContext.Provider value={{ setIsLoggedIn, setToken, token ,productInCart, setProductInCart}}>
        <div className="App">
-      <h1>Hello, World!</h1>
+     
       <Nav/>
       <Routes>
           <Route path="/users/register" element={<Register />} />
