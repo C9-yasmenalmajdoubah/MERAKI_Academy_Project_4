@@ -5,7 +5,7 @@ const Product = (props) => {
     <div className='product'>
         <img  src ={props.image_src }alt ="img"/>
         <p>{props.title}</p>
-        <p>{props.price}</p>
+        <p>{props.price} JD</p>
 
     </div>
   )
