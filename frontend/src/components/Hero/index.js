@@ -4,18 +4,19 @@ const Hero = () => {
   return (
     <div className='hero'>
         <div className='hero-left'>
-        <h2>NEW COLLECTION</h2>
+       
         <div>
         <div className='new'> 
-        <p>it's new</p>
-        <img src ="https://i.pinimg.com/236x/6d/c7/db/6dc7dbde9ed8a95d6d54ae3a17ce51b8.jpg" alt="new"/>
+        <p>FOR YOU LADY</p>
+        <p>NEW ARRIVED</p>
+        <br/>
         </div>  
         <p>NEW ARRIVED</p>
-<p>FOR YOU LADY</p>
+
 </div>
 <div className='hero-last'>
 <div> lastest COLLECTION</div>
-<img src ="https://www.shutterstock.com/image-vector/vector-banner-new-collection-decorative-260nw-1767276965.jpg" alt="new"/>
+<img src ="https://st5.depositphotos.com/79030344/67337/v/450/depositphotos_673374152-stock-illustration-new-collection-ribbon-banner-design.jpg" alt="new"/>
 </div>
 </div>
 <div className='hero-right'>
