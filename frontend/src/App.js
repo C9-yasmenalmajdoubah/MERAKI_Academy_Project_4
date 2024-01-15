@@ -21,9 +21,9 @@ function App() {
      
       <Nav/>
       <Routes>
-          <Route path="/users/register" element={<Register />} />
-          <Route path="/users/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />

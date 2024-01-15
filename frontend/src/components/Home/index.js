@@ -2,6 +2,7 @@
 import React ,{useEffect,useState,useContext}from 'react'
 import axios from 'axios';
 import { userContext } from "../../App"
+import Hero from '../Hero';
 const Home = () => {
   const { token,productInCart, setProductInCart } = useContext(userContext);
   const [product, setProduct] = useState([])
@@ -43,12 +44,14 @@ setProductInCart ([...productInCart,elem])
      }}>ADD To Cart</button>
         </>)
 })
-
-
-  return (
-    <div>
+/*
+<div>
       {allProduct}
     </div>
+*/
+
+  return (
+   <Hero/> 
   )
 }
 

@@ -2,6 +2,7 @@ import React ,{useState,useContext}from 'react'
 import axios from 'axios'
 import { userContext } from '../../App'
 import { useNavigate } from 'react-router-dom'
+import'./login.css'
 const Login = () => {
 const vani=useNavigate()
     const [user, setUser] = useState({email:"",
