@@ -1,0 +1,20 @@
+.pic{
+    display: block;
+    margin: 30px auto;
+}
+.shop{
+    display: flex;
+    margin: 0px 17px;
+    justify-content: center;
+    align-items: center;
+}
+.shop p  {
+    font-size: x-large;
+    font-weight: 600;
+}
+.product-after-filter{
+margin: 20px 170px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+row-gap: 80px;
+}

@@ -10,8 +10,9 @@ const vani=useNavigate()
   const {setIsLoggedIn,setToken}=useContext(userContext)
 
   return (
-    <div>Login
-        <br></br>
+    <div className='login'>
+<div className='contaner'>
+<h1>Sign In</h1>
         <input
         placeholder="Email"
         type="email"
@@ -46,6 +47,8 @@ const vani=useNavigate()
 
         }
       }>LOGIN</button>
+</div>
+       
     </div>
   )
 }

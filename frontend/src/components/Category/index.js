@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { userContext } from "../../App"
 import './category.css'
+import Product from "../Product/index"
 const Category = () => {
   const [product, setProduct] = useState([])
   let select=''
@@ -23,7 +24,7 @@ else if (index === '659a16696833c57aa3ae0b0e'){
   .get(`http://localhost:5000/products/${index}` )
   .then((res) => {
 console.log(res.data)
-    setProduct( res.data.products)
+    setProduct( res.data.product)
      
   })
   .catch((err) => {
@@ -36,21 +37,24 @@ useEffect(() => {
 getProduct()
 }, []);
 
-//console.log (select)
+console.log (product)
   return (
    <div className='shop-cat'>
-<img src={select} alt='1' height='300' width ='1350'/>
+<img  className='pic' src={select} alt='1' height='300' width ='82%'/>
 <div className='shop'>
 <p>
-  <span>Showing 1-12</span> out of 36 products
+  Showing 1-12 out of 36 products
 </p>
-<div className='ppp'>
-  
-  
-</div>
+
 </div>
 
-
+<div className='product-after-filter'>
+  
+  {product.map((elem , i)=>{
+        console.log (elem)
+        return <Product key ={i} name ={elem.title} image_src={elem.image_src} price ={elem.price}/>
+    })}
+</div>
    </div>
   
   

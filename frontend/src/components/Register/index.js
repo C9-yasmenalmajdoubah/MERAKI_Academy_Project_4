@@ -1,5 +1,6 @@
 import React ,{useState}from 'react'
 import axios from 'axios'
+import './register.css'
 const Register = () => {
 
 const [user, setUser] = useState({
@@ -12,15 +13,19 @@ const [user, setUser] = useState({
 
   return (
 
-    <div>Register <br></br>
-        <input
+    <div className='signup'>
+
+<div className='contaner'>       
+<h1>Sign Up </h1> 
+<div className='field'>
+  <input
         placeholder="Your Name"
         type="text"
         onChange={(e) => {
             setUser({ ...user, name: e.target.value });
         }}
       />
-      <br></br>
+    
      
     
       
@@ -31,7 +36,7 @@ const [user, setUser] = useState({
             setUser({ ...user, email: e.target.value });
         }}
       />
-      <br></br>
+
       <input
         placeholder="Password"
         type="password"
@@ -39,7 +44,7 @@ const [user, setUser] = useState({
             setUser({ ...user,password: e.target.value });
         }}
       />
-      <br></br>
+    
       <button onClick={()=>{
          axios.post("http://localhost:5000/users/register",user).then((res)=>{
           console.log(res.data.message)
@@ -47,7 +52,17 @@ const [user, setUser] = useState({
             console.log(err);
           })
         }
-      }>Register</button>
+      }>Continue</button>
+      <p className='haveAccount'>Already have an account? <span>Log In Here</span></p>
+      <div className='agree'>
+        <input type="checkbox" />
+        <p>By counitnuing , i agree to the term of use & privacy</p>
+      </div>
+      </div>
+
+
+      </div>
+      
     </div>
   )
 }
