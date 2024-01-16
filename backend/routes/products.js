@@ -1,5 +1,5 @@
 const express = require("express");
-const { add,getAllProducts } = require("../controllers/products");
+const { add,getAllProducts,getProductByCategoryId } = require("../controllers/products");
 
 
 const productsRouter = express.Router();
@@ -8,7 +8,8 @@ const authorization = require("../middleware/authorization");
 
 
 productsRouter.post("/",authentication,authorization("ADD_PRODUCTS"), add);
-productsRouter.get("/",authentication,authorization("GET_ALL_PRODUCTS"), getAllProducts);
+productsRouter.get("/" , getAllProducts);
+productsRouter.get("/:id", getProductByCategoryId);
 
 
 module.exports = productsRouter;

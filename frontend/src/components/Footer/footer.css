@@ -1,0 +1,38 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo p {
+    color: rgb(75, 83, 81);
+    font-size: 50px;
+    font-weight: 600;
+}
+.footer-link{
+    display: flex;
+    list-style: none;
+    gap :60px;
+    font-size: 25px;
+}
+
+.footer-link li{
+cursor: pointer;
+}
+.footer-icon{
+    display: flex;
+    gap: 20px;
+
+}
+.contaner{
+    padding :10px;
+    padding-bottom: 6px;
+    background: #fbfbfb;
+    border: 1px soild #ebebeb;
+}

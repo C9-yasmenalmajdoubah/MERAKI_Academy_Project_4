@@ -9,6 +9,7 @@ import Cart from "./components/Cart";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Category from "./components/Category";
+import Footer from "./components/Footer";
 export const userContext = createContext();
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
 
 
         </Routes>
+       
     </div>
     </userContext.Provider>
    

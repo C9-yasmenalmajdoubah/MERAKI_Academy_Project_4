@@ -10,7 +10,7 @@ const [cat,setCat]=useState("home")
   return (
     <div className="Nav" >
       <div className="nav-logo">
-        <img src ="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000750_online_international_e_commerce_logo_maker-01.png" alt ="logo"  width="60" height="60"/>
+        <img src ="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000750_online_international_e_commerce_logo_maker-01.png" alt ="logo" style ={{width:"60px" ,height:"60px"}}/>
       <p>For You Lady</p>
       </div>
       <ul className="nav-menu">

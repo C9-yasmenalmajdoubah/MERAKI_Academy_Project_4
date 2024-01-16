@@ -1,3 +1,4 @@
+const products = require("../models/products");
 const productsModel = require("../models/products");
 
 
@@ -62,11 +63,33 @@ const getAllProducts = (req, res) => {
       });
     });
 };
-
+const getProductByCategoryId = (req, res) => {
+let id = req.params.id;
+productsModel
+    .find({category:id})
+    .populate()
+    .exec()
+    .then(( product) => {
+     
+      res.status(200).json({
+        success: true,
+        message: `The  product ${id} `,
+       product: product,
+      });
+    })
+    .catch((err) => {
+      res.status(500).json({
+        success: false,
+        message: `Server Error`,
+        err: err.message,
+      });
+    });
+};
 
 
 
 module.exports = {
   add,
-  getAllProducts
+  getAllProducts,
+  getProductByCategoryId
 };
