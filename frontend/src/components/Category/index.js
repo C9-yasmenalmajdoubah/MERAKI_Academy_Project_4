@@ -6,11 +6,12 @@ import { userContext } from "../../App"
 const Category = () => {
   const [product, setProduct] = useState([])
   const {index}= useParams()
+  console.log(index)
   const getProduct = () => {
   axios
-  .get("http://localhost:5000/products/:index" )
+  .get(`http://localhost:5000/products/${index}` )
   .then((res) => {
-
+console.log(res.data)
     setProduct( res.data.products)
      
   })
