@@ -28,7 +28,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/category" element={<Category />} />
+          <Route path="/:index" element={<Category />}/>
+
 
 
         </Routes>
