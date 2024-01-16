@@ -1,14 +1,16 @@
 const cartModel = require("../models/cart");
 const updateCartByIdCart = async (req, res) => {
   const user_Id = req.token.userId;
-  // const { product, quantity, price } = req.body;
-  console.log( "reee",req.body);
+  //  const { product} = req.body;
+  console.log( "reee",req.body.porduct);
+  console.log("user_Id",user_Id)
+  
   cartModel
     .findOneAndUpdate(
       { user: user_Id },
       { $push: 
       {
-        porduct: req.body
+        porduct:req.body.porduct
       }},
       { new: true }
       
