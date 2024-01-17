@@ -12,7 +12,8 @@ const Home = () => {
     <>
     <Hero/> 
    <All/>
-   <Footer/>
+   <div className='footer'> <Footer/></div>
+  
     </>
    
   )

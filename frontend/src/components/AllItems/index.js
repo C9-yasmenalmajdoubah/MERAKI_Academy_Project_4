@@ -38,7 +38,8 @@ const All = () => {
 {
     product.map((elem , i)=>{
         console.log (elem)
-        return <Product key ={i} name ={elem.title} image_src={elem.image_src} price ={elem.price}/>
+        return <Product key ={i} name ={elem.title} image_src={elem.image_src} price ={elem.price} title ={elem.title} id ={elem._id} 
+          />
     })
 }
         </div>

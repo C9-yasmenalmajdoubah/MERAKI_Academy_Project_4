@@ -44,7 +44,7 @@ const [user, setUser] = useState({
             setUser({ ...user,password: e.target.value });
         }}
       />
-    
+    </div>
       <button onClick={()=>{
          axios.post("http://localhost:5000/users/register",user).then((res)=>{
           console.log(res.data.message)
@@ -57,7 +57,7 @@ const [user, setUser] = useState({
       <div className='agree'>
         <input type="checkbox" />
         <p>By counitnuing , i agree to the term of use & privacy</p>
-      </div>
+      
       </div>
 
 

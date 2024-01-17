@@ -17,7 +17,7 @@ else if (index === '659a16696833c57aa3ae0b0e'){
   select='https://reliancejewels.net/html/html/img/page-banner/Category_Banners_Gold_Bangles.jpg'
   }
   else if (index === '659a165f6833c57aa3ae0b0c'){
-    select='https://i.pinimg.com/1200x/b8/38/ca/b838ca5207ee0623ba003ce4e2086103.jpg'
+    select='https://mln2jro7x3jo.i.optimole.com/cb:tfXT.1b6e4/w:600/h:338/q:100/f:avif/https://www.925silverjewelry.com/wp-content/uploads/2023/10/10-2023-925Silver-Blog-CZ-Ring.jpg'
       }
   const getProduct = () => {
   axios
@@ -43,7 +43,7 @@ console.log (product)
 <img  className='pic' src={select} alt='1' height='300' width ='82%'/>
 <div className='shop'>
 <p>
-  Showing 1-12 out of 36 products
+  ALL NEW FOR YOU
 </p>
 
 </div>

@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Category from "./components/Category";
 import Footer from "./components/Footer";
+import Details from "./components/Details";
 export const userContext = createContext();
 
 function App() {
@@ -29,7 +30,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/product/:index" element={<Category />}/>
-
+          <Route path="/details" element={<Details />}/>
 
 
         </Routes>
