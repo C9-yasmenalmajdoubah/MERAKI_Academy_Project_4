@@ -18,8 +18,9 @@ function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [productInCart, setProductInCart] = useState([])
   const [product, setProduct] = useState([])
+  const [choose, setChoose] = useState([])
   return (
-    <userContext.Provider value={{ setIsLoggedIn, setToken, token ,productInCart, setProductInCart,product, setProduct}}>
+    <userContext.Provider value={{choose, setChoose, setIsLoggedIn, setToken, token ,productInCart, setProductInCart,product, setProduct}}>
        <div className="App">
      
       <Nav/>
@@ -30,8 +31,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product/:index" element={<Category />}/>
-          <Route path="/details" element={<Details />}/>
+          <Route path="/cat/:index" element={<Category />}/>
+          <Route path="/product/:id" element={<Details />}/>
 
 
         </Routes>
