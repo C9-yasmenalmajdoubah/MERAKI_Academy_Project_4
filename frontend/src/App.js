@@ -19,9 +19,10 @@ function App() {
   const [productInCart, setProductInCart] = useState([])
   const [product, setProduct] = useState([])
   const [choose, setChoose] = useState([])
-  
+  const [filter,setFilter]=useState([])
+  const[numOfItem,setNumOfItem]=useState(0)
   return (
-    <userContext.Provider value={{choose, setChoose, setIsLoggedIn, setToken, token ,productInCart, setProductInCart,product, setProduct}}>
+    <userContext.Provider value={{numOfItem,setNumOfItem,filter,setFilter,choose, setChoose, setIsLoggedIn, setToken, token ,productInCart, setProductInCart,product, setProduct}}>
        <div className="App">
      
       <Nav/>

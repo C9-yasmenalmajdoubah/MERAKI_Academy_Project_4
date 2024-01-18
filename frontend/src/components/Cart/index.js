@@ -43,8 +43,10 @@ console.log(productInCart)
   })
    console.log(allProduct)
   return (
-  //  <h1>test</h1>
-    <div>{allProduct}</div>
+    <>
+ 
+   <div>{allProduct}</div>
+   </>
   )
 }
 

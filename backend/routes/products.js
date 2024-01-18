@@ -9,7 +9,7 @@ const authorization = require("../middleware/authorization");
 
 productsRouter.post("/",authentication,authorization("ADD_PRODUCTS"), add);
 productsRouter.get("/" , getAllProducts);
-//productsRouter.get("/:id", getProductByCategoryId);
+productsRouter.get("/item/:id", getProductByCategoryId);
 productsRouter.get("/:id", getProductById );
 
 module.exports = productsRouter;
