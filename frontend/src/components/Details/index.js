@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
 import "./details.css";
 import { userContext } from "../../App";
+import axios from 'axios';
 import { useParams } from "react-router-dom";
 const Details = () => {
-  const { productInCart, setProductInCart, product } = useContext(userContext);
+  const { productInCart, setProductInCart, product,token } = useContext(userContext);
   const { id } = useParams();
   console.log(id);
 
@@ -22,8 +23,27 @@ console.log(choose)
         <h1>{choose.price} JD</h1>
         <button
           onClick={() => {
-            setProductInCart([...productInCart, setProductInCart(choose)]);
-            
+           
+
+axios
+  .put(`http://localhost:5000/cart/`,{
+    headers: {
+      Authorization: `Bearer ${token}`,
+    } ,
+    params: {
+      porduct:`${id}`
+    }}
+  )
+  .then((res) => {
+
+     setProductInCart([...productInCart, setProductInCart(choose)]);// add cart 
+     
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+
           }}
         >
           ADD TO CART

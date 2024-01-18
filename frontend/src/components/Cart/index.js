@@ -14,8 +14,8 @@ const Cart = () => {
         },
       })
       .then((res) => {
-console.log(res)
-        setProductInCart( res.data.products[0].cartItem);
+console.log( res.data.products[0].porduct)
+        setProductInCart(  res.data.products[0].porduct);
       })
       .catch((err) => {
         console.log(err);
@@ -27,21 +27,23 @@ console.log(res)
     getProduct()
   }, []);
 console.log(productInCart)
-const allProduct = productInCart.map((elem , i)=>{
-    return  (
+ const allProduct = productInCart.map((elem , i)=>{
+  console.log(elem);
+     return  (
       
-      <>
-      
-        <h2>{elem.quantity}</h2>{elem.title}
-  <h2> {elem.price}  JD</h2>
+       <>
+  
+     <h2>{elem.title}</h2>
+   <h2> {elem.price}  JD</h2>
        
-       <img src= {elem.image_src} ></img>
-       <br></br>
+        <img src= {elem.image_src} ></img>
+        <br></br> 
       
-          </>)
+           </>)
   })
-  console.log(allProduct)
+   console.log(allProduct)
   return (
+  //  <h1>test</h1>
     <div>{allProduct}</div>
   )
 }
