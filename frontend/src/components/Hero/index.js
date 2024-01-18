@@ -7,11 +7,9 @@ const Hero = () => {
        
         <div>
         <div className='new'> 
-        <p>FOR YOU LADY</p>
-        <p>NEW ARRIVED</p>
-        <br/>
+       
         </div>  
-        <p>NEW ARRIVED</p>
+        
 
 </div>
 <div className='hero-last'>

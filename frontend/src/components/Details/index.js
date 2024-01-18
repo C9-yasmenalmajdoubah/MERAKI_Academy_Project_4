@@ -26,13 +26,14 @@ console.log(choose)
            
 
 axios
-  .put(`http://localhost:5000/cart/`,{
+  .put(`http://localhost:5000/cart/`,
+    {
+      porduct:`${id}`
+    },{
     headers: {
       Authorization: `Bearer ${token}`,
     } ,
-    params: {
-      porduct:`${id}`
-    }}
+     }
   )
   .then((res) => {
 

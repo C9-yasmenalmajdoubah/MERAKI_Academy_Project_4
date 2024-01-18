@@ -16,7 +16,7 @@ const updateCartByIdCart = async (req, res) => {
       
     )
     .then((items) => {
-      console.log(items);
+      console.log("test");
       res.status(201).json({
         success: true,
         message: `items added`,
