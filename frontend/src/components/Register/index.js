@@ -1,8 +1,9 @@
 import React ,{useState}from 'react'
 import axios from 'axios'
 import './register.css'
+import { useNavigate } from 'react-router-dom'
 const Register = () => {
-
+  const vani=useNavigate()
 const [user, setUser] = useState({
     name:"",
  
@@ -51,14 +52,11 @@ const [user, setUser] = useState({
           }).catch((err)=>{
             console.log(err);
           })
+          vani('/login')
         }
       }>Continue</button>
-      <p className='haveAccount'>Already have an account? <span>Log In Here</span></p>
-      <div className='agree'>
-        <input type="checkbox" />
-        <p>By counitnuing , i agree to the term of use & privacy</p>
+     
       
-      </div>
 
 
       </div>

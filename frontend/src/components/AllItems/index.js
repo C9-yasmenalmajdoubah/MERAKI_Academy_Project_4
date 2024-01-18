@@ -5,8 +5,8 @@ import { userContext } from "../../App"
 import Product from "../Product/index"
 import './allitem.css'
 const All = () => {
-    const { token } = useContext(userContext);
-  const [product, setProduct] = useState([])
+    const { token,product, setProduct } = useContext(userContext);
+  
   const getProduct = () => {
     console.log("token:",token);
     axios

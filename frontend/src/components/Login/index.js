@@ -1,7 +1,7 @@
 import React ,{useState,useContext}from 'react'
 import axios from 'axios'
 import { userContext } from '../../App'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import'./login.css'
 const Login = () => {
 const vani=useNavigate()
@@ -48,7 +48,10 @@ const vani=useNavigate()
         }
       }>LOGIN</button>
 </div>
-       
+   <div>
+    <Link to='/register'><h2 >Don't Have , Click TO SIGN UP</h2></Link>
+    
+    </div>    
     </div>
   )
 }

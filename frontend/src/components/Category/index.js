@@ -5,7 +5,8 @@ import { userContext } from "../../App"
 import './category.css'
 import Product from "../Product/index"
 const Category = () => {
-  const [product, setProduct] = useState([])
+  const { product } = useContext(userContext);
+  let productFilter=[]
   let select=''
   
   const {index}= useParams()
@@ -19,6 +20,14 @@ else if (index === '659a16696833c57aa3ae0b0e'){
   else if (index === '659a165f6833c57aa3ae0b0c'){
     select='https://mln2jro7x3jo.i.optimole.com/cb:tfXT.1b6e4/w:600/h:338/q:100/f:avif/https://www.925silverjewelry.com/wp-content/uploads/2023/10/10-2023-925Silver-Blog-CZ-Ring.jpg'
       }
+
+productFilter=product.filter((elem,i)=>{
+console.log(elem)
+return elem.category._id===index
+})
+
+
+/*
   const getProduct = () => {
   axios
   .get(`http://localhost:5000/products/${index}` )
@@ -37,7 +46,7 @@ useEffect(() => {
 getProduct()
 }, []);
 
-console.log (product)
+console.log (product)*/
   return (
    <div className='shop-cat'>
 <img  className='pic' src={select} alt='1' height='300' width ='82%'/>
@@ -50,7 +59,7 @@ console.log (product)
 
 <div className='product-after-filter'>
   
-  {product.map((elem , i)=>{
+  {productFilter.map((elem , i)=>{
         console.log (elem)
         return <Product key ={i} name ={elem.title} image_src={elem.image_src} price ={elem.price}/>
     })}

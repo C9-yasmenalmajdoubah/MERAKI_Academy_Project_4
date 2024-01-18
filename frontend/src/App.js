@@ -17,8 +17,9 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [productInCart, setProductInCart] = useState([])
+  const [product, setProduct] = useState([])
   return (
-    <userContext.Provider value={{ setIsLoggedIn, setToken, token ,productInCart, setProductInCart}}>
+    <userContext.Provider value={{ setIsLoggedIn, setToken, token ,productInCart, setProductInCart,product, setProduct}}>
        <div className="App">
      
       <Nav/>
