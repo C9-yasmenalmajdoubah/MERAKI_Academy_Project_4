@@ -1,0 +1,48 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    background: #fce3fe;
+    padding-top: 0px;
+    align-self: center;
+}
+.contaner-log{
+    width: 100%;
+    height: 300px;
+   
+    margin-left: 0px;    
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap:29px;
+    margin-top: 30px;
+}
+.contaner-log h1{
+    margin: 10px 0px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.contaner-log input{
+    height: 80px;
+    width:40%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 19px;
+    align-self: center;
+    border-radius: 75px;
+}
+.contaner-log button{
+    width: 45%;
+    height: 50px;
+    color: white;
+    background: #ff4141;
+    margin-top: 30px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 75px;
+    margin-left:350px;
+}

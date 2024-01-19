@@ -4,18 +4,9 @@ const Footer = () => {
   return (
     
     <div className="footer">
-      <div className="logo">
-        <img
-          src="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000750_online_international_e_commerce_logo_maker-01.png"
-          alt="logo"
-          width="60"
-          height="60"
-        />
-        <p>FOR YOU LADY</p>
-      </div>
+      
       <ul className="footer-link">
-        <li>CONTACT</li>
-        <li>ABOUT</li>
+        
       </ul>
       <div className="footer-icon">
         <div className="contaner">
@@ -36,7 +27,8 @@ const Footer = () => {
             alt="i"
             width="60"
             height="60"
-          />
+          /><li>CONTACT</li>
+        <li>ABOUT</li>
         </div>
       </div>
     </div>

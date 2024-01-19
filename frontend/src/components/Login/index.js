@@ -11,7 +11,7 @@ const vani=useNavigate()
 
   return (
     <div className='login'>
-<div className='contaner'>
+<div className='contaner-log'>
 <h1>Sign In</h1>
         <input
         placeholder="Email"
@@ -21,7 +21,7 @@ const vani=useNavigate()
            
         }}
       />
-      <br></br>
+      
       <input
         placeholder="Password"
         type="password"
@@ -29,7 +29,7 @@ const vani=useNavigate()
             setUser({ ...user,password: e.target.value });
         }}
       />
-      <br></br>
+    
       <button onClick={()=>{
          axios.post("http://localhost:5000/users/login",user).then((res)=>{
           console.log(res.data.message)

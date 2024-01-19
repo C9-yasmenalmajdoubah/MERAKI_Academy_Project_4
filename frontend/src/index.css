@@ -4,3 +4,11 @@
 body{
     font-family: 'poppins';
 }
+.footer{
+    
+    position: relative;
+
+    
+
+    bottom: 0
+}

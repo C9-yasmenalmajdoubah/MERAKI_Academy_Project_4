@@ -35,10 +35,11 @@ const Details = () => {
   return (
     <div className="details">
        <div className="left-display">
-        <img src={item?.image_src} alt="2" />
+        <img src={item?.image_src} alt="2"  width="600" height="700"/>
       </div>
       <div className="right-display">
-        <h1>{item?item.title:<h1>cart is empty</h1>}</h1>
+        <h1>***{item?item.title:<h1>cart is empty</h1>}*** </h1>
+        <h1>    Description :</h1>
         <h1>{item?.description}</h1>
         <h1>{item?.price} JD</h1>
         <button
