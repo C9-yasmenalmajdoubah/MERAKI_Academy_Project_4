@@ -26,6 +26,7 @@ function App() {
        <div className="App">
      
       <Nav/>
+      
       <Routes>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
@@ -38,7 +39,7 @@ function App() {
 
 
         </Routes>
-       
+      
     </div>
     </userContext.Provider>
    

@@ -9,12 +9,13 @@ const Home = () => {
   
 
   return (
-    <>
+    <div className='c'>
     <Hero/> 
    <All/>
-   <div className='footer'> <Footer/></div>
+
+  {/* <div className='footer'> <Footer/></div>*/}
   
-    </>
+    </div>
    
   )
 }

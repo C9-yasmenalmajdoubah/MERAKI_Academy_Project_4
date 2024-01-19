@@ -39,6 +39,7 @@ const Details = () => {
       </div>
       <div className="right-display">
         <h1>{item?item.title:<h1>cart is empty</h1>}</h1>
+        <h1>{item?.description}</h1>
         <h1>{item?.price} JD</h1>
         <button
           onClick={() => {

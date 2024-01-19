@@ -4,12 +4,12 @@ const jwt = require("jsonwebtoken");
 const cartModel = require("../models/cart");
 
 const register = (req, res) => {
-  const { name, email, password, role } = req.body;
+  const { name, email, password } = req.body;
   const user = new usersModel({
     name,
     email,
     password,
-    role,
+    role:"659b6c8db81276475571831b",
   });
 
   user
